@@ -58,3 +58,33 @@ Para integrar React en el documento html colocamos los siguientes escripts:
   </body>
 </html>
 ```
+**NOTA:**
+Al refrescar el codigo aparecera un error en consola cuando agregamos esta
+porcion de codigo:
+
+```html
+ <script>
+
+    const h1Tag = <h1> Hola mundo </h1>
+
+  </script>
+```
+y sera por que no estamos usando *Babel* que se va a encargar de hacer la
+traduccion de un codigo moderno a lo que es un codigo que sea soportado por
+cualquier navegador web.
+
+```html
+<script type="text/babel">
+
+    const h1Tag = <h1> Hola mundo </h1>
+
+  </script>
+```
+agregando el atributo type a la etiqueta agregamos babel y solucionamos el
+error en consola.
+
+### BABEL
+Nos permite utilizar caracteristicas actuales de javascript, caracteristicas
+que han sido aceptadas y utilizar codigo en navegadores web que aun no soportan
+esa caracteristica.
+

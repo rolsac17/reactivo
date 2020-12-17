@@ -17,7 +17,16 @@
 
   <div id="root"></div>
 
-  <script>
+  <script type="text/babel">
+    //Aca obtenemos donde queremos que se renderise
+    const divRoot = document.querySelector('#root');
+    const nombre = 'Goku'
+    //Este es el elemento que queremos renderisar
+    const h1Tag = <h1> Hola Mundo {nombre} </h1>
+
+
+
+    ReactDOM.render(h1Tag, divRoot);
 
   </script>
 </body>
