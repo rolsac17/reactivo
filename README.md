@@ -88,3 +88,31 @@ Nos permite utilizar caracteristicas actuales de javascript, caracteristicas
 que han sido aceptadas y utilizar codigo en navegadores web que aun no soportan
 esa caracteristica.
 
+### VARIABLES Y CONSTANTES
+No se debe de utilizar **var** en nuestras aplicaciones ya que no es una buena practica, esa palabra tiene funciones ocultas que puede dañar nuestro codigo.
+
+Solo utilisaremos:
+- let: estas variables si se pueden renombrar.
+- const: para variables que no se van a cambiar o no se renombraran.
+
+**Variables de scoup**
+son variables que se encuentran en diferente contexto
+por ejemplo:
+
+javascript```
+  let valorDado=4;
+
+  if (true){
+    let valorDado=6;
+
+    console.log(valorDado)
+  }
+
+```
+el primer valorDado se encuentra en un diferente scoup
+al que se encuentra en el if y dentro del if se puede 
+volver a declarar otra le valorDado ya que esta en un
+diferente ambito, eso se puede hacer tambien con los
+const
+
+
