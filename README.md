@@ -99,7 +99,7 @@ Solo utilisaremos:
 son variables que se encuentran en diferente contexto
 por ejemplo:
 
-javascript```
+```
   let valorDado=4;
 
   if (true){
@@ -113,6 +113,67 @@ el primer valorDado se encuentra en un diferente scoup
 al que se encuentra en el if y dentro del if se puede 
 volver a declarar otra le valorDado ya que esta en un
 diferente ambito, eso se puede hacer tambien con los
-const
+const.
+
+### TEMPLATE STRING
+Es una forma de concatenar mas facil en la cual se 
+pueden incrustar instrucciones de javascript utilizando backtick en vez de comillas simples.
+
+```
+const nombre = 'Rolando';
+const apellido = 'de Paz';
+const nombreCompleto = `${nombre} ${apellido}`;
+
+function getSaludo(){
+  return 'Hola mundo soy';
+}
+
+console.log(`${getSaludo} ${nombre}`)
+
+```
+
+### OBJETOS LITERALES
+
+o tambien llamados en algunos lenguajes como diccionarios, trabaja con pares de valores **nombre:'Pedro'**, y se pueden hacer enbevidos.
+
+```
+const personaTable = {
+    nombre: 'Rolando',
+    apellido: 'de Paz',
+    edad: 25,
+    direccion: {
+        ciudad: 'Guatemala',
+        zip: 333333,
+        lat: 13.986,
+        lng: 32.9538,
+    }
+};
+```
+al crear un objeto simepre llevara su protootipe que es donde se encuentra las funciones que se puede hacer con ese objeto.
+
+se puede utilizar el **console.table** para que aparesca en una tabla y se vea mejor.
+
+para copiar un objeto no se beve hacer asi:
+```
+const persona2 = persona;
+
+```
+
+ya que solo se esta copiando la referencia en memoria del objeto original.
+
+Para eso se utiliza el operador **Spread (...)**.
+
+```
+const persona3 = { ...persona }
+
+
+```
+se agregan los tres puntos antes del objeto y ya tenemos el clon de persona.
+
+
+### FUNCIONES
+
+
+
 
 
