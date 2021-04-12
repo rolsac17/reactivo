@@ -1,22 +1,17 @@
 
 
+//Promesas
 
-//Import, Export y funciones comunes de arreglos.
+import {getHeroes} from './bases/08-imp-exp';
+import heroes from './data/heroes';
 
-import {heroes} from './data/heroes';
+const promesa = new Promise((resolve, reject) =>{
+    setTimeout( ()=>{
+        const heroes = getHeroes(2);
+        resolve(heroes);
+    }, 2000 )
+});
 
-console.log(heroes);
-
-const getHeroes = (id) => {
-    return heroes.find((dato) => dato.id === id);
-    
-};
-
-console.log(getHeroes(3));
-
-const getHeroesByOwner = (owner) => {
-    return heroes.find((dato) => dato.owner === owner);
-    
-};
-
-console.log(getHeroesByOwner('DC'));
+promesa.then((heroes)=>{
+    console.log('heroes',heroes);
+})
