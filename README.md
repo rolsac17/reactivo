@@ -173,6 +173,38 @@ se agregan los tres puntos antes del objeto y ya tenemos el clon de persona.
 
 ### FUNCIONES
 
+El problema de usar funciones de esta manera
+es que al imprimirla sale la referencia a la funcion.
+```
+function saludar(nombre){
+    return `Hola ${nombre}`
+}
+```
+al asignarle el valor de 30 se pierde la referencia a la funcion.
+
+```
+saludar = 30;
+```
+
+Para evitarlo asignamos a una constante la funcion.
+
+```
+const saludar2 = function(nombre){
+    return `Hola ${nombre}`;
+}
+```
+
+Funciones de flecha o funciones lamda
+```
+const saludar3 = (nombre) => {
+    return `Hola ${nombre}`
+}
+```
+### Comando Create React App
+
+npx create-react-app counter-app
+
+
 
 
 
