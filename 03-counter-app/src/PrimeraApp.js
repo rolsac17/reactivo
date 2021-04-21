@@ -1,14 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 //hay componentes basados en clases y en funciones
 //trabajaremos con funcional components antes se llamaban steylas funcional component.
 
-const PrimeraApp = () =>{
+// para que no aparesca el div podemos importa Fragment o usar la abreviatura <></>
+const PrimeraApp = ( props ) =>{
+
     return(
-        <Fragment>
-        <h1>Hola mundo</h1>
+        <>
+        <h1>{props.saludo}</h1>
         <p>Mi primera Aplicacion</p>
-        </Fragment>
+        </>
     )
 }
 
