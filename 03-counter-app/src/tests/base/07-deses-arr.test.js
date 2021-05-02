@@ -4,6 +4,6 @@ import '@testing-library/jest-dom';
 
 describe('07-deses-arr pruebas desestructuracion', () => {
     test('debe de retornar un string y un numero', () =>{
-        const prueba = retornaArreglo();
+        const arr = retornaArreglo();
     })
 })
