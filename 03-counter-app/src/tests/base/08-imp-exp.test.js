@@ -24,7 +24,7 @@ describe('08-imp-exp pruebas en funciones de heroes', () => {
         expect(heroe).toBe(undefined);
 
         // console.log(heroe);
-    })
+    });
 
     test('Prueba de getHeroeByOwner de DC', () => {
         const owner = 'DC';
@@ -34,5 +34,13 @@ describe('08-imp-exp pruebas en funciones de heroes', () => {
         expect(heroeOwner).toEqual(dataHeroe);
 
         console.log(heroeOwner);
+    });
+
+    test('Prueba de tamaño length getHeroeByOwner de Marvel', () => {
+        const owner = 'Marvel';
+        const heroeOwner = getHeroesByOwner(owner).length;
+        console.log(heroeOwner);
+
+        expect(heroeOwner).toBe(2);
     })
 })
