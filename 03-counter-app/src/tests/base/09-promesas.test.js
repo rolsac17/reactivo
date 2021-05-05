@@ -10,7 +10,7 @@ describe('Pruebas de async en 09-promesas', () => {
         getHeroeByIdAsync(id)
         .then(heroe => {
             expect( true ).toBe( false );
-            done();
+        
         })
     })
 })
